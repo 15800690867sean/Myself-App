@@ -1,10 +1,10 @@
 import React from 'react';
 // import styles from './tab-bar.module.less';
-import './tab-bar.less';
+import styles from './tab-bar.less';
 
 export default function Tabbar(props) {
   return (
-    <div className='tabBarContainer'>
+    <div className={styles.tabBarContainer}>
         Tabbar
     </div>
   )
