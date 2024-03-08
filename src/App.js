@@ -1,8 +1,11 @@
-import './App.css';
+import Homepage from './pages/homepage.tsx';
+import styles from './App.css';
 
 function App() {
   return (
-    <div>homepage</div>
+    <div className={styles.mainContainer}>
+      <Homepage/>
+    </div>
   );
 }
 
