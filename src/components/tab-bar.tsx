@@ -1,28 +1,26 @@
 import React from "react";
-// import styles from './tab-bar.module.less';
 import styles from "./tab-bar.less";
+import portrait from '../assets/portrait.png';
+import { Link, useNavigate } from 'react-router-dom';
+import tabs from "../const/tabItems";
 
 export default function Tabbar() {
-  const tabItems = [
-    {
-      name: "About Me",
-      link: "/about",
-    },
-    {
-      name: "Contact",
-      link: "/contact",
-    },
-    {
-      name: "Feedback",
-      link: "/feedback",
-    },
-  ];
+  const navigate = useNavigate();
+
+  const tabItems = tabs;
+
+  const handleIconClick = () => {
+    navigate('/');
+  }
 
   return (
     <div className={styles.tabBarContainer}>
-      {tabItems.map((item) => (
-        <div className={styles.tab} key={item.link}>{item.name}</div>
-      ))}
+      <img onClick={handleIconClick} src={portrait} className={styles.portrait} alt="Icon" />
+      <div className={styles.tabList}>
+        {tabItems.map((item) => (
+          <Link to={item.link} className={styles.tab} key={item.link}>{item.name}</Link>
+        ))}
+      </div>
     </div>
   );
 }

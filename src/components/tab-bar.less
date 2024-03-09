@@ -1,15 +1,32 @@
 .tabBarContainer {
-  // width: 100%;
   height: 6rem;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
   padding: 0 2rem;
 
-  .tab {
-    color: #fff;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  a {
+    text-decoration: none;
+  }
+
+  .portrait {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+  
+  .tabList {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .tab {
+      color: #fff;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
   }
 }

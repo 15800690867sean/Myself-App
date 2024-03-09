@@ -1,13 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import Tabbar from './components/tab-bar.tsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import Tabbar from "./components/tab-bar.tsx";
+import { BrowserRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Tabbar />
-    <App />
+    <BrowserRouter>
+      <Tabbar />
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
