@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/homepage.less";
 import bgImg from "../assets/background.jpg";
+import selfIntroduction from '../const/self-introduction';
 
 export default function Homepage() {
   console.log(styles);
@@ -17,8 +18,7 @@ export default function Homepage() {
           </h1>
           <h1>a Frontend Developer.</h1>
           <p>
-            I am committed to using the most professional technology to make the
-            most professional products and provide the perfect user experience.
+            {selfIntroduction}
           </p>
         </div>
       </div>
